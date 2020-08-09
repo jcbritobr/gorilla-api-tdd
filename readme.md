@@ -2,7 +2,7 @@
 This is a simple rest api that implements a todo application. It uses [gorilla-mux](https://github.com/gorilla/mux) to create the routes, and **TDD** and **Table Tests**. **Gorilla-mux** and http standard library from Go are good combination to build microservices. They are small, and produces efficient executables.
 
 * **Gorilla-mux** \
-[Gorilla-mux](https://github.com/gorilla/mux) is a library used to implement requests and dispatcher, for matching incoming resquests
+[Gorilla-mux](https://github.com/gorilla/mux) is a library used to implement requests and dispatcher, for matching incoming resquests.
 ```go
 subroute.HandleFunc("/item/{id:[0-9]+}", findItem).Methods("GET")
 ```
