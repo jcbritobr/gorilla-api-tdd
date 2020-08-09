@@ -35,7 +35,8 @@ func TestFindToDoItem(t *testing.T) {
 }
 ```
 
-* **Design** \
+* **Design**
+
 <p align="center">
     <img src="image/rest-api.png">
 </p>
