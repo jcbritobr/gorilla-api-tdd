@@ -1,4 +1,4 @@
-## A gorilla to-do rest api using TDD and Go tests best pratices \
+## A gorilla to-do rest api using TDD and Go tests best pratices
 This is a simple rest api that implements a todo application. It uses [gorilla-mux](https://github.com/gorilla/mux) to create the routes, and **TDD** and **Table Tests**. **Gorilla-mux** and http standard library from Go are good combination to build microservices. They are small, and produces efficient executables.
 
 * **Gorilla-mux** \
