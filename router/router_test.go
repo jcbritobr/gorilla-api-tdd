@@ -36,8 +36,8 @@ func TestFindItem(t *testing.T) {
 		path   string
 		result string
 	}{
-		{"FindItem test response body A", "/api/item/1", `{"id":1,"description":"A"}`},
-		{"FindItem test response body B", "/api/item/2", `{"id":2,"description":"B"}`},
+		{"FindItem test response body A", "/api/items/1", `{"id":1,"description":"A"}`},
+		{"FindItem test response body B", "/api/items/2", `{"id":2,"description":"B"}`},
 	}
 
 	for _, tc := range tt {
@@ -101,7 +101,7 @@ func TestCreate(t *testing.T) {
 			formData := url.Values{}
 			formData.Set("id", strconv.Itoa(tc.args.id))
 			formData.Set("description", tc.args.description)
-			req, err := http.NewRequest(http.MethodPost, "/api/item/create", bytes.NewBufferString(formData.Encode()))
+			req, err := http.NewRequest(http.MethodPost, "/api/items", bytes.NewBufferString(formData.Encode()))
 			if err != nil {
 				t.Errorf("Can't create a request object")
 			}
@@ -124,7 +124,7 @@ func TestRouteFindAll(t *testing.T) {
 	setup()
 	expected := `[{"id":1,"description":"A"},{"id":2,"description":"B"}]`
 	t.Run("route findall A", func(t *testing.T) {
-		req, err := http.NewRequest(http.MethodGet, "/api/item/all", nil)
+		req, err := http.NewRequest(http.MethodGet, "/api/items", nil)
 		if err != nil {
 			t.Errorf("Can't create a request object")
 		}
@@ -158,7 +158,7 @@ func TestDelete(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			req, err := http.NewRequest(http.MethodDelete, fmt.Sprintf("/api/item/%d", tt.args.id), nil)
+			req, err := http.NewRequest(http.MethodDelete, fmt.Sprintf("/api/items/%d", tt.args.id), nil)
 			if err != nil {
 				t.Errorf("Can't create a new request")
 			}

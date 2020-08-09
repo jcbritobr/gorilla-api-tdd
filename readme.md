@@ -4,12 +4,12 @@ This is a simple rest api that implements a todo application. It uses [gorilla-m
 * **Gorilla-mux** \
 [Gorilla-mux](https://github.com/gorilla/mux) is a library used to implement requests and dispatcher, for matching incoming resquests.
 ```go
-subroute.HandleFunc("/item/{id:[0-9]+}", findItem).Methods("GET")
+subroute.HandleFunc("/items/{id:[0-9]+}", findItem).Methods("GET")
 ```
 
 
 * **Golang table tests pattern** \
-This pattern allow us to build tests that are reusable.We may test many scenarios in the same test.
+This pattern allow us to build tests that are reusable. We may test many scenarios in the same test.
 ```go
 func TestFindToDoItem(t *testing.T) {
 	setup()

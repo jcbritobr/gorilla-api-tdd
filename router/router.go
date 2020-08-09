@@ -14,10 +14,10 @@ import (
 // SetupRouter setups necessary handle for the routers
 func SetupRouter(m *mux.Router) {
 	subroute := m.PathPrefix("/api/").Subrouter()
-	subroute.HandleFunc("/item/all", findAll).Methods("GET")
-	subroute.HandleFunc("/item/{id:[0-9]+}", findItem).Methods("GET")
-	subroute.HandleFunc("/item/create", create).Methods("POST")
-	subroute.HandleFunc("/item/{id:[0-9]+}", delete).Methods("DELETE")
+	subroute.HandleFunc("/items", findAll).Methods("GET")
+	subroute.HandleFunc("/items/{id:[0-9]+}", findItem).Methods("GET")
+	subroute.HandleFunc("/items", create).Methods("POST")
+	subroute.HandleFunc("/items/{id:[0-9]+}", delete).Methods("DELETE")
 }
 
 func checkBadRequest(err error, w http.ResponseWriter) {
