@@ -1,5 +1,5 @@
 ## A gorilla to-do rest api using TDD and Go tests best pratices
-This is a simple rest api that implements a todo application. It uses [gorilla-mux](https://github.com/gorilla/mux) to create the routes, and **TDD** and **Table Tests**. **Gorilla-mux** and http standard library from Go are good combination to build microservices. They are small, and produces efficient executables.
+This is a simple rest api that implements a todo application. It uses [gorilla-mux](https://github.com/gorilla/mux) to create the routes, and **TDD** and **Test Table Driven**. **Gorilla-mux** and http standard library from Go are good combination to build microservices. They are small, and produces efficient executables.
 
 * **Gorilla-mux** \
 [Gorilla-mux](https://github.com/gorilla/mux) is a library used to implement requests and dispatcher, for matching incoming resquests.
@@ -8,7 +8,7 @@ subroute.HandleFunc("/items/{id:[0-9]+}", findItem).Methods("GET")
 ```
 
 
-* **Golang table tests pattern** \
+* **Golang Test Table Driven pattern** \
 This pattern allow us to build tests that are reusable. We may test many scenarios in the same test.
 ```go
 func TestFindToDoItem(t *testing.T) {
