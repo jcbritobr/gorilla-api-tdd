@@ -49,11 +49,11 @@ In project root folder type `go test ./... -v`
 
 * **Using curl to work with the api**
 ```shell
-$ curl -i http://localhost:8080/api/items/3
+curl -i http://localhost:8080/api/item/3
 HTTP/1.1 200 OK
-Date: Sun, 09 Aug 2020 14:07:19 GMT
-Content-Length: 25
+Date: Sun, 09 Aug 2020 13:57:53 GMT
+Content-Length: 32
 Content-Type: text/plain; charset=utf-8
 
-{"id":3,"description":"have a breakfast at 08:00"}
+{"id":3,"description":"sample3"}
 ```
